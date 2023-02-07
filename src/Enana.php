@@ -16,23 +16,23 @@ class Enana
 
     public function heridaLeve()
     {
-        return $this->puntosVida - 10;
+        $this->puntosVida - 10;
         if ($this->puntosVida > 0) {
-            $this->situacion = 'viva';
+            return $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
-            $this->situacion = 'muerta';
+            return $this->situacion = 'muerta';
         } elseif ($this->puntosVida === 0) {
-            $this->situacion = 'limbo';
+            return $this->situacion = 'limbo';
         }
-        /* return $this->situacion; */
+        /* $this->situacion; */
         #Se le quitan 10 puntos de vida a la Enana y además se cambia el valor de situacion (si fuera necesario)
     }
 
     public function heridaGrave()
     {
-        return $this->puntosVida - $this->puntosVida;
+        $this->puntosVida - $this->puntosVida;
         if ($this->puntosVida === 0) {
-            $this->situacion = 'limbo';
+            return $this->situacion = 'limbo';
         }
         #Se le quita toda la vida que posea hasta tener 0 puntos de vida y cambiarle la situacion a limbo
     }
@@ -40,15 +40,14 @@ class Enana
     public function pocima()
     {
 
-        return $this->puntosVida + 10;
+        $this->puntosVida + 10;
         if ($this->puntosVida > 0) {
-            $this->situacion = 'viva';
+            return $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
-            $this->situacion = 'muerta';
+            return $this->situacion = 'muerta';
         } elseif ($this->puntosVida = 0) {
-            $this->situacion = 'limbo';
+            return $this->situacion = 'limbo';
         }
-        /* return $this->situacion; */
 
         #Recupera 10 puntos de vida y además cambia el valor de situacion si así fuera necesario.
         #Si la Enana está en el limbo, la pocima no le afecta, seguirá en el limbo con 0 puntos de vida.
@@ -57,15 +56,14 @@ class Enana
 
     public function pocimaExtra()
     {
-        return $this->puntosVida + 50;
+        $this->puntosVida + 50;
         if ($this->puntosVida > 0) {
-            $this->situacion = 'viva';
+            return $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
-            $this->situacion = 'muerta';
+            return $this->situacion = 'muerta';
         } elseif ($this->puntosVida === 0) {
-            $this->situacion = 'muerta';
+            return $this->situacion = 'muerta';
         }
-        /* return $this->situacion; */
 
         #Única manera de devolver a la vida del limbo. Además se otorgarán 50 puntos de vida.
     }
