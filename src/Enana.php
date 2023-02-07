@@ -16,7 +16,7 @@ class Enana
 
     public function heridaLeve()
     {
-        $this->puntosVida - 10;
+        $this->puntosVida = $this->puntosVida - 10;
         if ($this->puntosVida > 0) {
             $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
@@ -30,7 +30,7 @@ class Enana
 
     public function heridaGrave()
     {
-        $this->puntosVida - $this->puntosVida;
+        $this->puntosVida = $this->puntosVida - $this->puntosVida;
         if ($this->puntosVida === 0) {
             $this->situacion = 'limbo';
         }
@@ -41,7 +41,7 @@ class Enana
     public function pocima()
     {
 
-        $this->puntosVida + 10;
+        $this->puntosVida = $this->puntosVida + 10;
         if ($this->puntosVida > 0) {
             $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
@@ -58,7 +58,7 @@ class Enana
 
     public function pocimaExtra()
     {
-        $this->puntosVida + 50;
+        $this->puntosVida = $this->puntosVida + 50;
         if ($this->puntosVida > 0) {
             $this->situacion = 'viva';
         } elseif ($this->puntosVida < 0) {
